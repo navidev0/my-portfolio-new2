@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 const { title, image, desc, url, badge, tags, target = "_blank" } = Astro.props;
+console.log(image);
 ---
 
 <div
@@ -9,7 +10,7 @@ const { title, image, desc, url, badge, tags, target = "_blank" } = Astro.props;
 	<a href={url} target={target}>
 		<div class="hero-content flex flex-col md:flex-row">
 			{
-				image && (
+				(
 					<Image
 						src={image}
 						width={750}
