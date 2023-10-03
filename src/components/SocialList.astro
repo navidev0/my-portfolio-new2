@@ -30,8 +30,8 @@ const socialLinks = [
 ---
 
 <div class="flex flex-wrap items-end gap-x-4">
-	<p>Encuentrame en</p>
-	<ul class="flex flex-1 items-center gap-x-2 sm:flex-initial">
+	<!-- <p>Encuentrame en</p> -->
+	<ul class="flex flex-1 items-center gap-x-4 sm:flex-initial">
 		{
 			socialLinks.map(({ link, name, friendlyName }) => {
 				const isEmail = name.includes("email") || friendlyName.toLowerCase().includes("email");
@@ -43,7 +43,7 @@ const socialLinks = [
 							target="_blank"
 							rel={`noopener noreferrer me ${isEmail ? "authn" : ""}`}
 						>
-							<Icon class="h-6 w-6" name={name} aria-hidden="true" focusable="false" />
+							<Icon class="h-8 w-8" name={name} aria-hidden="true" focusable="false" />
 							<span class="sr-only">{friendlyName}</span>
 						</a>
 					</li>
